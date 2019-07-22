@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+		<style>
+			* {
+				
+				margin: 0px;
+				padding: 0px;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			.wrap {
+				width:350px;
+				height:30px;
+				margin:100px auto 0;
+				padding-left: 30px;
+				background: #B9E1DC;
+				border-radius: 5px;
+			}
+
+			.wrap li {
+				background: #87DFD6;
+			}
+
+			.wrap ul li {
+				width:100px;
+				float: left;
+				margin-right: 10px;
+				position: relative;
+			}
+
+			.wrap a {
+				height:30px;
+				width:100px;
+				text-decoration:none;
+				color: #000;
+				line-height: 30px;
+				text-align: center;
+			}
+
+			.wrap li ul {
+				position: absolute;
+				top: 30px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<ul>
+				<li>
+					<a href="javascript:void(0);">一级菜单1</a>
+					<ul>
+						<li><a href="javascript:void(0);">二级菜单11</li>
+						<li><a href="javascript:void(0);">二级菜单12</li>
+						<li><a href="javascript:void(0);">二级菜单13</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">一级菜单2</a>
+					<ul>
+						<li><a href="javascript:void(0);">二级菜单21</li>
+						<li><a href="javascript:void(0);">二级菜单22</li>
+						<li><a href="javascript:void(0);">二级菜单23</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">一级菜单3</a>
+					<ul>
+						<li><a href="javascript:void(0);">二级菜单31</li>
+						<li><a href="javascript:void(0);">二级菜单32</li>
+						<li><a href="javascript:void(0);">二级菜单33</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function () {
+				$(".wrap>ul>li").mouseenter(function () {
+					$(this).children('ul').show();
+				})
+				$(".wrap>ul>li").mouseleave(function () {
+					$(this).children('ul').hide();
+				})
+			})
+		</script>	
+	</body>
+</html>

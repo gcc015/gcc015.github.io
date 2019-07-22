@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>高亮显示图片</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			body {
+				background: #000;
+			}
+
+			.wrap {
+				margin: 100px auto 0;
+				width: 50%;
+				height: 50%;
+				padding: 10px 0 0 10px;
+				background: #000;
+				overflow:hidden;
+				/* border: 1px solid #fff; */
+			}
+
+			.wrap li {
+				width:300px;
+				float: left;
+				margin: 0 10px 10px 0;
+			}
+
+			.wrap img {
+				display:block;
+				border: 0;
+				width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<ul>
+				<li>
+					<a href="#"><img src="../img/highlight_picture/duoduo.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/highlight_picture/ledi.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/highlight_picture/taotao.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/highlight_picture/mili.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/highlight_picture/huxuyeye.jpg" alt="" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/highlight_picture/kulei.jpg" alt="" /></a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function () {
+				$(".wrap").hover(function () {		
+					$("ul li").hover(function () {
+						$(this).css("opacity", '1').siblings().css("opacity", '0.4');
+					}, function () {
+						$(this).css("opacity", '0.4').siblings().css("opacity", '0.4');
+					});	
+				},function () {
+					$(this).find("li").css("opacity", '1');
+				});				
+			});
+		</script>
+	</body>
+</html>

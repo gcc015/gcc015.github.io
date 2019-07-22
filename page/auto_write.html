@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+		<style>
+			.loading-text {
+				position: relative;
+				font-family: Consolas, Monaco, monospace;
+				display: block;
+				color: #ED6A5A;
+				font-weight: bold;
+				width: 57ch;
+				animation: loading-text-typing 5s steps(56),
+						   loading-text-caret 1s steps(1) infinite;
+				white-space: nowrap;
+				overflow: hidden;
+				border-right: 1px solid;
+			}	
+			@keyframes loading-text-typing {
+				from {
+					width: 0;
+				}
+			}
+
+			@keyframes loading-text-caret {
+				50% {
+					border-color: transparent;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<span class="loading-text">
+			*system out printIn:/
+			*你好，我是Summer
+			*我来自黑龙江哈尔滨
+		</span>	
+	</body>
+</html>

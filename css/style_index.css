@@ -1,0 +1,17 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/bg.jpg");
+    background-size: 100%;
+}
+
+.item {
+    width: 30%;
+}
+
+.showpic {
+    width: 100%;
+}

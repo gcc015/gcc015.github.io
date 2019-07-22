@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>简单版手风琴</title>
+		<style>
+			* {
+				padding :0;
+				margin: 0;
+			}
+
+			ul {
+				list-style-type:none;
+				margin:100px auto;
+			}
+
+			.parentWarp {
+				width: 250px;
+				text-align: center;
+			}
+
+			.menuGroup {
+				border: 1px solid #BFBAF3;
+				background-color: #BDF1F6;
+			}
+
+			.groupTitle {
+				display: block;
+				height: 30px;
+				line-height: 30px;
+				font-size: 16px;
+				border-bottom: 1px solid #77628C;
+				cursor: pointer;
+			}
+
+			.menuGroup>div {
+				height: 200px;
+				background-color: #F2FCFC;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="parentWarp">
+			 <li class="menuGroup">
+			 	<span class="groupTitle">我是标题1</span>
+			 	<div>我是弹出来的div1</div>
+			 </li>
+			 <li class="menuGroup">
+			 	<span class="groupTitle">我是标题2</span>
+			 	<div>我是弹出来的div2</div>
+			 </li>
+			 <li class="menuGroup">
+			 	<span class="groupTitle">我是标题3</span>
+			 	<div>我是弹出来的div3</div>
+			 </li>
+			 <li class="menuGroup">
+			 	<span class="groupTitle">我是标题4</span>
+			 	<div>我是弹出来的div4</div>
+			 </li>
+		</ul>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function () {
+				$(".groupTitle").click(function () {
+					//当前点击的span的兄弟元素显示出来，它的父级元素的兄弟元素的子元素div隐藏
+					$(this).next().show().parent().siblings().children('div').hide();
+				});
+			});
+		</script>
+	</body>
+</html>
