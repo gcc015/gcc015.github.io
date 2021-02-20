@@ -4,14 +4,27 @@
 }
 
 body {
-    background-image: url("https://github.com/gcc015/gcc015.github.io/raw/master/imges/tree.jpg"); 
+    /* background-image: url("https://github.com/gcc015/gcc015.github.io/raw/master/imges/tree.jpg");  */
     background-size: 100%;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+}
+
 .item {
-    width: 30%;
+    border: 5px solid #41b5ebb6;
 }
 
 .showpic {
     width: 100%;
+}
+
+.item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
 }
